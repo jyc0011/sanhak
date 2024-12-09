@@ -23,6 +23,9 @@ export default function CustomRoadmapList({
       onSelectRoadmap(id);
       closeSidePanel();
     }
+    else if(onSelectRoadmap) {
+      onSelectRoadmap(id);
+    }
   }
   return (
     <div className="w-[250px] h-full text-sm py-4 bg-gray-f8">

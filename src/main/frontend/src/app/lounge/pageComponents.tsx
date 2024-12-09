@@ -77,6 +77,24 @@ export default function LoungePage() {
     }
   };
 
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prev) => {
+        const newPage = prev - 1;
+        localStorage.setItem('currentPage', newPage.toString());
+        return newPage;
+      });
+    }
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage((prev) => {
+      const newPage = prev + 1;
+      localStorage.setItem('currentPage', newPage.toString());
+      return newPage;
+    });
+  };
+
   useEffect(() => {
     fetchProfileData();
   }, [selectedFilter, currentPage]);
@@ -103,6 +121,22 @@ export default function LoungePage() {
                 ))}
               </div>
             </div>
+          </div>
+          <div className='flex justify-center items-center mt-4'>
+            <button
+                onClick={handlePreviousPage}
+                disabled={currentPage === 1}
+                className='px-4 py-2 mx-2 bg-gray-200 rounded disabled:opacity-50'
+            >
+              이전
+            </button>
+            <span className='px-4 py-2'>{currentPage}</span>
+            <button
+                onClick={handleNextPage}
+                className='px-4 py-2 mx-2 bg-gray-200 rounded'
+            >
+              다음
+            </button>
           </div>
         </div>
       </div>

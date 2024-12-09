@@ -218,7 +218,7 @@ export default function MypagePage({
               )}
             </div>
           </div>
-          <div>
+          <div className='mb-8'>
             <div className='flex items-center text-center text-lg md:text-2xl font-gmarketsansMedium'><img className='w-4 h-4 md:w-6 md:h-6 mb-1 mr-1' src='asset/png/icon_company.png' alt='AI추천기업' />AI추천기업</div>
             <div className='flex text-sm md:text-lg mb-2'>
               <div className='font-gmarketsansMedium'><strong className='w-fit font-gmarketsansBold'>{userInfo?.name}</strong>님의 커리어를 바탕으로 AI가 추천하는 맞춤형기업 TOP4</div>
