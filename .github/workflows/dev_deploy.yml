@@ -1,3 +1,5 @@
+
+
 name: Travel Compass Dev CI/CD
 
 on:
@@ -15,6 +17,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Create .env file
+        run: echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4.0.0
