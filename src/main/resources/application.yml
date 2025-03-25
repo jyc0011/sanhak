@@ -91,7 +91,7 @@ spring:
 
 cors:
   allowed:
-    origin: https://kau2024pathfinder.com/
+    origin: http://52.78.81.66
 
 api:
   base:
