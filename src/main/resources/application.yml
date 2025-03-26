@@ -88,6 +88,12 @@ spring:
           timeout: 5000
           starttls:
             enable: true
+server:
+  servlet:
+    session:
+      cookie:
+        same-site: None
+        secure: true
 
 cors:
   allowed:
