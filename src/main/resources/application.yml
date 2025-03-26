@@ -93,7 +93,7 @@ server:
     session:
       cookie:
         same-site: None
-        secure: true
+        secure: false
 
 cors:
   allowed:
